@@ -38,15 +38,15 @@ public class Staircase {
 		public PrintStair(int height) {
 			this.height = height;
 
-			for (int i = 0; i < this.height - 1; i++) {
+			for (int i = 1; i < this.height; i++) {
 				blank += " ";
 				symbol += "#";
 			}
 		}
 
 		public String print(int i) {
-			String a = blank.substring(0, this.height - 1 - i);
-			String b = symbol.substring(this.height - 1 - i);
+			String a = blank.substring(0, this.height - i);
+			String b = symbol.substring(this.height - i);
 			return a + b;
 		}
 	}
@@ -58,7 +58,7 @@ public class Staircase {
 
 		PrintStair printStair = new PrintStair(n);
 
-		for (int i = 0; i < n; i++) {
+		for (int i = 1; i <= n; i++) {
 			System.out.println(printStair.print(i));
 		}
 	}

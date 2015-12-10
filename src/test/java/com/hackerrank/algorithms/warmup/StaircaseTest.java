@@ -17,4 +17,16 @@ public class StaircaseTest {
 
 		Assert.assertEquals(expected, result);
 	}
+
+	@Test
+	public void testShouldReturnZeroBlankCharsAndSixSymbolsWhenHeightIsSixAndLineNumberIsSix() {
+		int height = 6;
+		int lineNumber = 6;
+		String expected = "######";
+
+		Staircase.PrintStair printStair = new Staircase.PrintStair(height);
+		String result = printStair.print(lineNumber);
+
+		Assert.assertEquals(expected, result);
+	}
 }
